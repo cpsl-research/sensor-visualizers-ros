@@ -1,0 +1,10 @@
+/resizer/resizer:
+  ros__parameters:
+    interpolation: 1  # bilinear
+    scale_height: 0.5
+    scale_with: 0.5
+    qos_overrides:  # parameter group for all qos overrides
+      /resizer/resize/image_raw:  # parameter group for the topic
+        publisher:
+          reliability: reliable
+          depth: 10
